@@ -1,0 +1,22 @@
+<body>
+    <app-layout></app-layout>
+
+    
+
+    <div class="container">
+
+      <h1 class="title">— Reviews Page —</h1>
+
+        <div class="list-group" *ngFor="let Review of reviews; let i =index" >
+            
+          <div  class="list-group-item">
+            <img src="../../../assets/LOGO-DASH.png" class="img-circle" width="50" height="50" alt="Profile Picture">
+            <p class="list-group-item-owner">Posted by : {{ Review.owner }}</p>
+            <p class="list-group-item-date">On : {{ Review.created_at }}</p>
+            <p class="list-group-item-text">{{Review.comment}}</p>
+          
+          </div>
+          <span class="delete-icon" (click)="delete(Review.id,i)">✖</span>
+        </div>
+    </div>
+</body>

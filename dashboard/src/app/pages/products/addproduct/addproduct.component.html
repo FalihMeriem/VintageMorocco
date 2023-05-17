@@ -1,0 +1,44 @@
+<body>
+  <app-layout></app-layout>
+<div class="register">
+    <h1 class="title"> 
+      Add a new Product !
+    </h1>
+   
+    <form class="register-form" [formGroup]="productform" (ngSubmit)="OnSubmit()">
+         
+          <div class="register-field">
+              <label for="name">Name :</label>
+              <input type="text" placeholder="Enter the product's name" class="form-control" id="title" formControlName="title" required>
+            </div>
+            
+            <div class="register-field">
+                <label for="price">Price :</label>
+                <input type="text" placeholder="Enter the product's price" class="form-control" id="price" formControlName="price" required>
+            </div>
+
+            <div class="register-field">
+                <label for="category">Category :</label>
+                <input type="text" placeholder="Enter the product's category" class="form-control" id="category" formControlName="category" required>
+            </div>
+
+            <div class="register-field">
+              <label for="description">Description :</label>
+              <textarea type="text" placeholder="Enter the product's description" class="form-control" id="description" formControlName="description" required></textarea>
+            </div>
+
+            <div class="register-field">
+              <label for="category">Image :</label>
+              <input type="text" placeholder="Enter the product's image URL" class="form-control" id="image" formControlName="image" required>
+          </div>
+            
+            <div class="buttons">
+              <p><button type="submit" class="submit-button" >Add Product</button></p>
+            </div>
+            
+      </form>
+      
+</div>
+  
+
+</body>
